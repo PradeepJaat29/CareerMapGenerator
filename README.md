@@ -27,9 +27,11 @@ Built with no external dependencies — 100% pure Java (compatible with Java 21)
 
 CareerMapGenerator/
 <br>
+<br>
 ├── core/
 <br>
 │ └── MainApp.java ← Main entry point
+<br>
 <br>
 ├── logic/
 <br>
@@ -41,15 +43,19 @@ CareerMapGenerator/
 <br>
 │ └── ResourceLoader.java ← Loads resources
 <br>
+<br>
 ├── data/
 <br>
 │ ├── careers.txt ← Career options
 <br>
 │ └── resources.txt ← Resources per career
 <br>
+<br>
 ├── export/
 <br>
+<br>
 │ └── roadmap.txt ← Output file
+<br>
 <br>
 └── assets/
 <br>
