@@ -28,18 +28,31 @@ Built with no external dependencies — 100% pure Java (compatible with Java 21)
 CareerMapGenerator/
 <br>
 ├── core/
+<br>
 │ └── MainApp.java ← Main entry point
+<br>
 ├── logic/
+<br>
 │ ├── InputHandler.java ← Handles user input
+<br>
 │ ├── CareerSuggester.java ← Suggests careers
+<br>
 │ ├── RoadmapBuilder.java ← Builds roadmap
+<br>
 │ └── ResourceLoader.java ← Loads resources
+<br>
 ├── data/
+<br>
 │ ├── careers.txt ← Career options
+<br>
 │ └── resources.txt ← Resources per career
+<br>
 ├── export/
+<br>
 │ └── roadmap.txt ← Output file
+<br>
 └── assets/
+<br>
 └── banners.txt ← CLI banner (ASCII art)
 
 ---
