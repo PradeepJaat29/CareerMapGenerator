@@ -26,6 +26,7 @@ Built with no external dependencies — 100% pure Java (compatible with Java 21)
 ## 🗂️ Folder Structure
 
 CareerMapGenerator/
+<br>
 ├── core/
 │ └── MainApp.java ← Main entry point
 ├── logic/
