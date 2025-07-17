@@ -30,25 +30,25 @@ CareerMapGenerator/
 <br>
 ├── core/
 <br>
-│ └── MainApp.java ← Main entry point
+└── MainApp.java ← Main entry point
 <br>
 <br>
 ├── logic/
 <br>
-│ ├── InputHandler.java ← Handles user input
+├── InputHandler.java ← Handles user input
 <br>
-│ ├── CareerSuggester.java ← Suggests careers
+├── CareerSuggester.java ← Suggests careers
 <br>
-│ ├── RoadmapBuilder.java ← Builds roadmap
+├── RoadmapBuilder.java ← Builds roadmap
 <br>
-│ └── ResourceLoader.java ← Loads resources
+└── ResourceLoader.java ← Loads resources
 <br>
 <br>
 ├── data/
 <br>
-│ ├── careers.txt ← Career options
+├── careers.txt ← Career options
 <br>
-│ └── resources.txt ← Resources per career
+└── resources.txt ← Resources per career
 <br>
 <br>
 ├── export/
