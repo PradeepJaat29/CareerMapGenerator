@@ -53,7 +53,6 @@ CareerMapGenerator/
 <br>
 ├── export/
 <br>
-<br>
 │ └── roadmap.txt ← Output file
 <br>
 <br>
