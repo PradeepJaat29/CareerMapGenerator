@@ -1,0 +1,6 @@
+Data Scientist:CS,Math
+Web Developer:CS
+Digital Marketer:Commerce,Arts
+Doctor:Bio
+Cybersecurity Analyst:CS
+Product Manager:All
