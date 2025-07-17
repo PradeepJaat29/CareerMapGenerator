@@ -56,7 +56,7 @@ CareerMapGenerator/
 │ └── roadmap.txt ← Output file
 <br>
 <br>
-└── assets/
+├── assets/
 <br>
 └── banners.txt ← CLI banner (ASCII art)
 
