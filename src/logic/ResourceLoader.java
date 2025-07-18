@@ -3,50 +3,31 @@ package logic;
 import java.io.*;
 import java.util.*;
 
-public class ResourceLoader 
-{
+public class ResourceLoader {
 
-    public String[] loadResources(String career) 
-    {
-    	
-        List<String> resourceList = new ArrayList<>();
-        
-        try (BufferedReader reader = new BufferedReader(new FileReader("data/resources.txt"))) 
-        {
-        	
+    public String[] loadResources(String career) {
+        career = career.toLowerCase().trim();
+
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/data/resources.txt"))) {
             String line;
-            boolean sectionFound = false;
-            
-            while ((line = reader.readLine()) != null) 
-            {
-            	
-                if (line.equalsIgnoreCase("[" + career + "]")) 
-                {
-                
-                	sectionFound = true;
-                    continue;
-                }
-                
-                if (sectionFound) 
-                {
-                	
-                    if (line.startsWith("[")) 
-                    {
-                    
-                    	break;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(":");
+                if (parts.length != 2) continue;
+
+                String key = parts[0].trim().toLowerCase();
+                String[] resources = parts[1].split(",");
+
+                if (key.equals(career)) {
+                    for (int i = 0; i < resources.length; i++) {
+                        resources[i] = resources[i].trim();
                     }
-                    
-                    resourceList.add(line);
+                    return resources;
                 }
             }
-        } 
-        
-        catch (IOException e) 
-        {
-        
-        	System.out.println("❌ Error reading resource file: " + e.getMessage());
+        } catch (IOException e) {
+            System.out.println("❌ Error reading resources.txt: " + e.getMessage());
         }
 
-        return resourceList.toArray(new String[0]);
+        return new String[]{"Explore online platforms like Coursera, YouTube, and LinkedIn Learning."}; // default
     }
 }

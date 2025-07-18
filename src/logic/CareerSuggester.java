@@ -3,45 +3,29 @@ package logic;
 import java.io.*;
 import java.util.*;
 
-public class CareerSuggester 
-{
+public class CareerSuggester {
 
-    public String suggestCareer(String[] input) 
-    {
-    	
-        String stream = input[0].toLowerCase();
-        String interests = input[1].toLowerCase();
+    public String suggestCareer(String[] userInput) {
+        String interest = userInput[1].toLowerCase().trim();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("data/careers.txt"))) 
-        {
-        	
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/data/careers.txt"))) {
             String line;
-            
-            while ((line = reader.readLine()) != null) 
-            {
-            	
+            while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(":");
-                
-                if (parts.length >= 2) 
-                {
-                
-                	String career = parts[0].trim();
-                    String matchStream = parts[1].toLowerCase();
+                if (parts.length != 2) continue;
 
-                    if (matchStream.contains(stream) || interests.contains(career.toLowerCase())) 
-                    {
-                    	
-                        return career;
-                    }
+                String category = parts[0].trim().toLowerCase();
+                String[] careers = parts[1].split(",");
+
+                if (category.equals(interest)) {
+                    // Return first matching career (you can randomize this)
+                    return careers[0].trim(); 
                 }
             }
+        } catch (IOException e) {
+            System.out.println("❌ Error reading careers.txt: " + e.getMessage());
         }
-        
-        catch (IOException e)
-        {
-         
-        	System.out.println("❌ Error reading career file: " + e.getMessage());
-        }
-        return "Generalist";
+
+        return "Generalist"; // Default if no match
     }
 }

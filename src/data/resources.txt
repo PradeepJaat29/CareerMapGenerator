@@ -1,26 +1,9 @@
-[Data Scientist]
-https://www.coursera.org/learn/data-science
-https://www.kaggle.com/
-https://towardsdatascience.com/
-
-[Web Developer]
-https://www.freecodecamp.org/
-https://developer.mozilla.org/
-https://www.theodinproject.com/
-
-[Digital Marketer]
-https://www.hubspot.com/
-https://www.coursera.org/learn/digital-marketing
-
-[Doctor]
-https://www.nhp.gov.in/
-https://www.aiims.edu/
-
-[Cybersecurity Analyst]
-https://www.hackthebox.com/
-https://owasp.org/
-https://tryhackme.com/
-
-[Product Manager]
-https://www.atlassian.com/
-https://www.productschool.com/
+Software Engineer: Java, System Design, Leetcode
+Web Developer: HTML, CSS, JavaScript, React
+Data Scientist: Python, Pandas, ML Basics
+UI/UX Designer: Figma, Design Thinking, UX Research
+Graphic Designer: Photoshop, Illustrator, Canva
+Product Designer: Wireframing, Design Systems, User Testing
+Data Analyst: Excel, SQL, Power BI
+Business Analyst: SWOT, Stakeholder Mgmt, Agile
+Research Analyst: SPSS, Research Methods, Surveys

@@ -1,6 +1,3 @@
-Data Scientist:CS,Math
-Web Developer:CS
-Digital Marketer:Commerce,Arts
-Doctor:Bio
-Cybersecurity Analyst:CS
-Product Manager:All
+coding: Software Engineer, Web Developer, Data Scientist
+design: UI/UX Designer, Graphic Designer, Product Designer
+analytics: Data Analyst, Business Analyst, Research Analyst

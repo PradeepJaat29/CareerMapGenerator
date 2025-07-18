@@ -1,51 +1,38 @@
 package logic;
 
 import java.io.*;
+import java.nio.file.*;
 
-public class RoadmapBuilder
+public class RoadmapBuilder 
 {
 
     public void buildRoadmap(String career, String[] userInput, String[] resources) 
     {
     	
-        File folder = new File("export");
+        StringBuilder sb = new StringBuilder();
         
-        if (!folder.exists())
+        sb.append("👨‍🎓 Career Roadmap for ").append(userInput[0]).append("\n");
+        sb.append("📌 Suggested Career: ").append(career).append("\n");
+        sb.append("🎯 Goal: ").append(userInput[2]).append("\n\n");
+        sb.append("📚 Recommended Resources:\n");
+
+        for (String res : resources) 
         {
         	
-            folder.mkdirs();
+            sb.append(" - ").append(res).append("\n");
         }
 
-        try (PrintWriter writer = new PrintWriter(new FileWriter("export/roadmap.txt")))
+        try 
         {
         	
-            writer.println("🚀 Personalized Career Roadmap");
-            writer.println("Career: " + career);
-            writer.println("Stream: " + userInput[0]);
-            writer.println("Interests: " + userInput[1]);
-            writer.println("Skill Level: " + userInput[2]);
-            writer.println("\n📚 Recommended Resources:");
-
-            if (resources.length == 0) 
-            {
-            
-            	writer.println("⚠️ No resources found. Explore online platforms like Coursera, Udemy, or edX.");
-            } 
-            
-            else 
-            {
-            
-            	for (String res : resources) {
-                    writer.println("🔗 " + res);
-                }
-            }
-
+            Files.createDirectories(Paths.get("export"));
+            Files.write(Paths.get("src/export/roadmap.txt"), sb.toString().getBytes());
         } 
         
         catch (IOException e) 
         {
-        
-        	System.out.println("❌ Error writing roadmap: " + e.getMessage());
+        	
+            System.out.println("❌ Error writing roadmap.txt: " + e.getMessage());
         }
     }
 }

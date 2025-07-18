@@ -9,12 +9,13 @@ import logic.RoadmapBuilder;
 public class MainApp 
 {
 
-    public static void main(String[] args)
+    public static void main(String[] args) 
     {
     	
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("🚀 Welcome to Career Map Generator");
+        System.out.println("🚀 Welcome to Career Map Generator\n");
+
         InputHandler input = new InputHandler();
         String[] userInput = input.captureInput(sc);
 
