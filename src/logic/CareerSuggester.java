@@ -1,7 +1,6 @@
 package logic;
 
 import java.io.*;
-import java.util.*;
 
 public class CareerSuggester {
 
@@ -18,14 +17,13 @@ public class CareerSuggester {
                 String[] careers = parts[1].split(",");
 
                 if (category.equals(interest)) {
-                    // Return first matching career (you can randomize this)
-                    return careers[0].trim(); 
+                    return careers[0].trim(); // return first career suggestion
                 }
             }
         } catch (IOException e) {
             System.out.println("❌ Error reading careers.txt: " + e.getMessage());
         }
 
-        return "Generalist"; // Default if no match
+        return "Generalist"; // fallback
     }
 }
