@@ -6,9 +6,12 @@ import logic.CareerSuggester;
 import logic.ResourceLoader;
 import logic.RoadmapBuilder;
 
-public class MainApp {
+public class MainApp 
+{
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
+    	
         Scanner sc = new Scanner(System.in);
 
         System.out.println("🚀 Welcome to Career Map Generator\n");

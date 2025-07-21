@@ -2,9 +2,12 @@ package logic;
 
 import java.util.Scanner;
 
-public class InputHandler {
+public class InputHandler 
+{
 
-    public String[] captureInput(Scanner sc) {
+    public String[] captureInput(Scanner sc) 
+    {
+    	
         System.out.print("👤 Enter your name: ");
         String name = sc.nextLine().trim();
 

@@ -2,14 +2,21 @@ package logic;
 
 import java.io.*;
 
-public class CareerSuggester {
+public class CareerSuggester 
+{
 
-    public String suggestCareer(String[] userInput) {
+    public String suggestCareer(String[] userInput) 
+    {
+    	
         String interest = userInput[1].toLowerCase().trim();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("src/data/careers.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/data/careers.txt"))) 
+        {
+        	
             String line;
-            while ((line = reader.readLine()) != null) {
+            while ((line = reader.readLine()) != null) 
+            {
+            	
                 String[] parts = line.split(":");
                 if (parts.length != 2) continue;
 
@@ -20,7 +27,11 @@ public class CareerSuggester {
                     return careers[0].trim(); // return first career suggestion
                 }
             }
-        } catch (IOException e) {
+        } 
+        
+        catch (IOException e) 
+        
+        {
             System.out.println("❌ Error reading careers.txt: " + e.getMessage());
         }
 
